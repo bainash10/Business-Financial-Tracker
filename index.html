@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break-Even Point & Financial Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Business Financial Tracker</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Break-Even Point Calculator</h3>
+                <form id="breakeven-form">
+                    <div class="mb-3">
+                        <label for="fixedCost" class="form-label">Fixed Costs (Rs.):</label>
+                        <input type="number" id="fixedCost" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="variableCost" class="form-label">Variable Cost per Unit (Rs.):</label>
+                        <input type="number" id="variableCost" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="sellingPrice" class="form-label">Selling Price per Unit (Rs.):</label>
+                        <input type="number" id="sellingPrice" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="unitsSold" class="form-label">Units Sold:</label>
+                        <input type="number" id="unitsSold" class="form-control" required>
+                    </div>
+
+                    <button type="button" class="btn btn-primary w-100" onclick="calculateBreakEven()">Calculate</button>
+                </form>
+
+                <div class="mt-4" id="financialStatements">
+                    <h4>Financial Statements</h4>
+                    <p><strong>Break-Even Point:</strong> <span id="breakEvenPoint"></span> units</p>
+                    <p><strong>Total Revenue:</strong> Rs.<span id="totalRevenue"></span></p>
+                    <p><strong>Total Costs:</strong> Rs.<span id="totalCosts"></span></p>
+                    <p><strong>Profit/Loss:</strong> Rs.<span id="profitLoss"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
